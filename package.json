@@ -1,0 +1,25 @@
+{
+  "name": "expense-tracker",
+  "private": true,
+  "workspaces": [
+    "packages/shared",
+    "frontend/web",
+    "frontend/miniapp"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=frontend/web",
+    "dev:miniapp": "npm run dev --workspace=frontend/miniapp",
+    "build:web": "npm run build --workspace=frontend/web",
+    "build:miniapp": "npm run build --workspace=frontend/miniapp",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
